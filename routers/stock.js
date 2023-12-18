@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
 
 router.patch("/", (res, req) => {
   try {
-    stock = Stock.findById(req.params.id);
+    const stock = Stock.findById(req.params.id);
 
     stock.quantity = req.body.quantity;
 

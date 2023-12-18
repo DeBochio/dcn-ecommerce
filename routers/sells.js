@@ -37,6 +37,7 @@ router.post("/", async (req, res) => {
 router.patch("/:id", async (req, res) => {
   try {
     const sell = await Sells.findById(req.params.id);
+
     sell.date_of_sell = req.body.date_of_sell;
     sell.total = req.body.total;
     sell.delivery_status = req.body.status;
